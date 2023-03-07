@@ -4,4 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable, :lockable
   enum role: [:user, :seller, :admin]
+
+  has_many :properties, dependent: :destroy
 end

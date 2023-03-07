@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        width: 100%;
+        height: 710px;
+        /* background-image: url(/assets/index_img.jpg);
+        background-repeat: no-repeat;
+        background-position: left bottom; */
+
+        background-color:rgba(230,120,130,1)
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>Popular properties for your family</h3>
+    <% @properties.each do |property| %>
+    <div class="carousel-item">
+      <%= image_tag(property.image.url, alt: 'Image') if property.image? %>
+      <div class="carousel-caption d-none d-md-block">
+      <h5>Exclusive Properties for your family</h5>
+      <p>X</p>
+      </div>
+    </div>
+    <% end %>
+  </body>
+</html>

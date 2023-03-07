@@ -1,0 +1,58 @@
+<%= form_with model: @property do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :city%>
+    <%= form.text_field :city %>
+  </div>
+  <br>
+  <div class="field form-check form-check-inline">
+    <%= form.label :for_type %>
+    <%= form.select :for_type, options_for_select([['Sell', 'sell'], ['Rent', 'rent']]) %>
+  </div>
+  <br>
+  <div class="field form-check form-check-inline">
+    <%= form.label :type_of_building %>
+    <%= form.select :type_of_building, options_for_select([['Flat', 'flat'], ['Row House', 'row house'], ['Bunglow', 'bunglow']]) %>
+  </div>
+  <br>
+  <div class="field form-check form-check-inline">
+    <%= form.label :accommodations_type %>
+    <%= form.select :accommodations_type, options_for_select([['1 BHK', '1 BHK'], ['2 BHK', '2 BHK'], ['3 BHK', '3 BHK'], ['4 BHK', '4 BHK']]) %>
+  </div>
+  <br>
+  <div class="field form-check form-check-inline">
+    <%= form.label :type_of_construction %>
+    <%= form.select :type_of_construction, options_for_select([['Old', 'old'], ['New', 'new']]) %>
+  </div>
+  <br>
+  <div class="field form-check form-check-inline">
+    <%= form.label :facilities %>
+    <%= form.select :facilities, options_for_select([['Unfurnished', 'unfurnished'], ['Semi-furnished', 'semi-furnished'], ['Fully-furnished', 'fully-furnished']]) %>
+  </div>
+  <div>
+    <%= form.label :location %><br>
+    <%= form.text_area :location %>
+  </div>
+  <div>
+    <%= form.label :price %><br>
+    <%= form.text_field :price %>
+  </div>
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+
+
+
+
+

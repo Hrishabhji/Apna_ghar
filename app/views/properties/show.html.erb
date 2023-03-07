@@ -1,0 +1,32 @@
+<ul> 
+  <li>
+    <%= image_tag(@property.image.url, alt: 'Image') if @property.image? %>
+  </li>
+  <li>
+    <%= @property.name %>
+  </li>
+  <li>
+    <%= @property.city %>
+  </li>
+  <li>
+    <%= @property.location %>
+  </li>
+  <li>
+    <%= @property.for_type %>
+  </li>
+  <li>
+    <%= @property.type_of_building %>
+  </li>
+  <li>
+    <%= @property.accommodations_type %>
+  </li>
+  <li>
+    <%= @property.type_of_construction %>
+  </li>
+  <li>
+    <%= @property.facilities %>
+  </li>
+  <li>
+    <%= @property.price %>
+  </li>
+</ul>
